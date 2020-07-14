@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/list_item_day_txt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textStyle="bold" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/list_item_day_txt_temperature_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Sıcaklık"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/list_item_day_txt_feel_title"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/list_item_day_img_temperature"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_sunrise"
+            app:layout_constraintEnd_toEndOf="@+id/list_item_day_txt_temperature_title"
+            app:layout_constraintStart_toStartOf="@+id/list_item_day_txt_temperature_title"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_day_txt_temperature_title" />
+
+        <TextView
+            android:id="@+id/list_item_day_txt_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="8dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/list_item_day_img_temperature"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="@+id/list_item_day_img_temperature"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_day_img_temperature" />
+
+
+        <TextView
+            android:id="@+id/list_item_day_txt_celsius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="°C"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/list_item_day_txt_temperature"
+            app:layout_constraintTop_toTopOf="@+id/list_item_day_txt_temperature" />
+
+        <TextView
+            android:id="@+id/list_item_day_txt_feel_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hissedilen"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/list_item_day_txt_humidity_title"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/list_item_day_txt_temperature_title"
+            app:layout_constraintTop_toTopOf="@+id/list_item_day_txt_temperature_title"
+            android:layout_marginRight="8dp" />
+
+        <ImageView
+            android:id="@+id/list_item_day_img_feels"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_sunrise"
+            app:layout_constraintEnd_toEndOf="@+id/list_item_day_txt_feel_title"
+            app:layout_constraintStart_toStartOf="@+id/list_item_day_txt_feel_title"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_day_txt_feel_title" />
+
+        <TextView
+            android:id="@+id/list_item_day_txt_feels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/list_item_day_txt_temperature"
+            app:layout_constraintEnd_toEndOf="@+id/list_item_day_img_feels"
+            app:layout_constraintStart_toStartOf="@+id/list_item_day_img_feels"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_day_img_feels" />
+
+        <TextView
+            android:id="@+id/list_item_day_txt_feels_celsius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="°C"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/list_item_day_txt_feels"
+            app:layout_constraintTop_toTopOf="@+id/list_item_day_txt_feels" />
+
+        <TextView
+            android:id="@+id/list_item_day_txt_humidity_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nem"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/list_item_day_txt_pressure_title"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/list_item_day_txt_feel_title"
+            app:layout_constraintTop_toTopOf="@+id/list_item_day_txt_feel_title"
+            android:layout_marginRight="8dp" />
+
+        <ImageView
+            android:id="@+id/list_item_day_img_humidity"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_humidity"
+            app:layout_constraintEnd_toEndOf="@+id/list_item_day_txt_humidity_title"
+            app:layout_constraintStart_toStartOf="@+id/list_item_day_txt_humidity_title"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_day_txt_humidity_title" />
+
+        <TextView
+            android:id="@+id/list_item_day_txt_humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/list_item_day_txt_feels"
+            app:layout_constraintEnd_toEndOf="@+id/list_item_day_img_humidity"
+            app:layout_constraintStart_toStartOf="@+id/list_item_day_img_humidity"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_day_img_humidity" />
+
+        <TextView
+            android:id="@+id/list_item_day_txt_humidity_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/list_item_day_txt_humidity"
+            app:layout_constraintTop_toTopOf="@+id/list_item_day_txt_humidity" />
+
+        <TextView
+            android:id="@+id/list_item_day_txt_pressure_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Basınç"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/list_item_day_txt_wind_title"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/list_item_day_txt_humidity_title"
+            app:layout_constraintTop_toTopOf="@+id/list_item_day_txt_humidity_title"
+            android:layout_marginRight="8dp" />
+
+        <ImageView
+            android:id="@+id/list_item_day_img_pressure"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_pressure"
+            app:layout_constraintEnd_toEndOf="@+id/list_item_day_txt_pressure_title"
+            app:layout_constraintStart_toStartOf="@+id/list_item_day_txt_pressure_title"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_day_txt_pressure_title" />
+
+        <TextView
+            android:id="@+id/list_item_day_txt_pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/list_item_day_txt_humidity"
+            app:layout_constraintEnd_toEndOf="@+id/list_item_day_img_pressure"
+            app:layout_constraintStart_toStartOf="@+id/list_item_day_img_pressure"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_day_img_pressure" />
+
+        <TextView
+            android:id="@+id/list_item_day_txt_wind_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rüzgar"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/list_item_day_txt_pressure_title"
+            app:layout_constraintTop_toTopOf="@+id/list_item_day_txt_pressure_title"
+            android:layout_marginRight="8dp" />
+
+        <ImageView
+            android:id="@+id/list_item_day_img_wind"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_wind"
+            app:layout_constraintEnd_toEndOf="@+id/list_item_day_txt_wind_title"
+            app:layout_constraintStart_toStartOf="@+id/list_item_day_txt_wind_title"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_day_txt_wind_title" />
+
+        <TextView
+            android:id="@+id/list_item_day_txt_wind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/list_item_day_txt_pressure"
+            app:layout_constraintEnd_toEndOf="@+id/list_item_day_img_wind"
+            app:layout_constraintStart_toStartOf="@+id/list_item_day_img_wind"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_day_img_wind" />
+
+        <TextView
+            android:id="@+id/list_item_day_txt_kmh_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KmH"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/list_item_day_txt_wind"
+            app:layout_constraintTop_toTopOf="@+id/list_item_day_txt_wind" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
